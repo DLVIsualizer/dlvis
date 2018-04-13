@@ -49,7 +49,8 @@ fig = plt.figure(figsize=(64,3))
 print(' - - - -Activation Operations - - - - - - - - - - - - - - - - - -')
 operations = sess.graph.get_operations()
 
-graph = dlv.graph.Graph(sess.graph)
+
+graph = dlv.Graph(sess.graph)
 
 # Dictionary of network operations (activations) to fetch
 fetches = {}

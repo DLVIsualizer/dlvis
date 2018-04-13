@@ -1,6 +1,9 @@
 # window virtualenv
 venv/
 
+# Models
+SlimModels/
+
 #UML
 z_UML/
 

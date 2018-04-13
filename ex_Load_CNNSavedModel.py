@@ -2,6 +2,7 @@ import tensorflow as tf
 import matplotlib.pyplot as plt
 from tensorflow.python.tools import inspect_checkpoint as chkp
 from tensorflow.examples.tutorials.mnist import input_data
+import dlv
 
 mnist = input_data.read_data_sets("./mnist/data/", one_hot=True)
 
@@ -47,6 +48,8 @@ fig = plt.figure(figsize=(64,3))
 # ** Get Models and Insert prediction images
 print(' - - - -Activation Operations - - - - - - - - - - - - - - - - - -')
 operations = sess.graph.get_operations()
+
+graph = dlv.graph.Graph(sess.graph)
 
 # Dictionary of network operations (activations) to fetch
 fetches = {}

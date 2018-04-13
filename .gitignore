@@ -2,10 +2,10 @@
 venv/
 
 # Models
-SlimModels/
+z_SlimModels/
 
-#UML
-z_UML/
+# ignore
+z_ignore/
 
 .vscode
 *.sw*

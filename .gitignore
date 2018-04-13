@@ -1,6 +1,9 @@
 # window virtualenv
 venv/
 
+#UML
+z_UML/
+
 .vscode
 *.sw*
 

@@ -48,9 +48,18 @@ fig = plt.figure(figsize=(64,3))
 # ** Get Models and Insert prediction images
 print(' - - - -Activation Operations - - - - - - - - - - - - - - - - - -')
 operations = sess.graph.get_operations()
+opnames = [op.name for op in operations]
+
+with open('z_ignore/sample_cnn_ops.txt' ,"w") as f:
+    opnames = "\n".join(opnames)
+    f.writelines(opnames)
+
+# f = open('z_ignore/sample_cnn_ops.txt' ,"w")
+
 
 
 graph = dlv.Graph(sess.graph)
+
 
 # Dictionary of network operations (activations) to fetch
 fetches = {}
